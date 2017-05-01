@@ -1,19 +1,324 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addons>
-    <addon id="repository" name="El Angel Caido" version="0.1.0" provider-name="El Angel Caido">
+<addon id="plugin.video.pelisalacarta"
+    name="pelisalacarta"
+    version="4.2.0~beta3"
+    provider-name="tvalacarta">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="script.module.libtorrent" optional="true"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="es">Películas y series a la carta</summary>
+    <description lang="es">Películas, series, documentales, anime, ... todo lo que puedas encontrar en Internet ahora desde tu media center. Incluye canales en Español, Italiano e Inglés.</description>
+    <summary lang="en">Movies and TV Shows on demand</summary>
+    <description lang="en">Movies, Series, Documentaries, Anime, ... everything you can find on Internet now on your media center. Includes channels in Spanish, Italian and English.</description>
+    <platform>all</platform>
+    <license>GNU GPL v3</license>
+    <forum>http://www.mimediacenter.info/foro</forum>
+    <website>http://blog.tvalacarta.info/plugin-xbmc/pelisalacarta</website>
+    <email>tvalacarta@gmail.com</email>
+    <source>https://github.com/tvalacarta/pelisalacarta</source>
+  </extension>
+  <extension point="xbmc.service" library="library_service.py" start="login|startup">
+  </extension>
+</addon>
+
+<addon id="plugin.video.Catoal"
+       name="Catoal[COLOR blue] 5[/COLOR].[COLOR yellow]3[/COLOR].[COLOR red]8[/COLOR]"
+       version="5.3.8"
+       provider-name="Catoal">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="script.module.beautifulsoup" version="3.2.1"/>
+    <import addon="script.module.simple.downloader" version="0.9.4"/>
+    <import addon="script.module.beautifulsoup4" />
+    <import addon="script.module.requests" />
+    <import addon="script.module.httplib2" />
+    <import addon="script.module.liveresolver" version="0.1.24" optional="true"/>
+    <import addon="script.module.youtube.dl" optional="true"/>
+    <import addon="plugin.video.youtube" optional="true" />
+    <import addon="script.module.urlresolver" optional="true"/>
+    <import addon="script.module.simplejson" />
+     <import addon="script.module.livestreamer" optional="true"/>
+     <import addon="script.module.pyamf" optional="true"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>video</provides>
+  </extension>
+
+     <extension point="xbmc.addon.repository" name="Catoal Repository">
+		<info compressed="false">http://raw.github.com/catoalkodi/repository.catoal/master/addons.xml</info>
+		<checksum>http://raw.github.com/catoalkodi/repository.catoal/master/addons.xml.md5</checksum>
+		<datadir zip="true">http://raw.github.com/catoalkodi/repository.catoal/master/repo/</datadir>
+	</extension>
+
+  <extension point="xbmc.addon.metadata">
+    <summary>Creado por Catoal</summary>
+    <description>Catoal 2017</description>
+    <platform>all</platform>
+  </extension>
+</addon>
+
+<addon id="plugin.video.cine" name="Cine" version="1.0.14" provider-name="Topo">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="addon.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>Cine</summary>
+    <description>Cine</description>
+    <disclaimer></disclaimer>
+    <language></language>
+    <platform>all</platform>
+    <license></license>
+    <forum></forum>
+    <website></website>
+    <email></email>
+    <source></source>
+  </extension>
+</addon>
+
+<addon id="plugin.video.quasar" name="Quasar" version="0.9.78" provider-name="scakemyer">
+    <requires>
+        <import addon="xbmc.addon" version="16.0.0" />
+        <import addon="xbmc.python" version="2.24.0" />
+        <import addon="repository.quasar" optional="true" />
+        <import addon="script.quasar.burst" optional="true" />
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="navigation.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.service" library="service.py" start="startup" />
+    <extension point="xbmc.python.module" library="resources/site-packages" />
+    <extension point="xbmc.subtitle.module" library="navigation.py" />
+    <extension point="xbmc.addon.metadata">
+        <summary lang="en">Quasar: Torrent streaming</summary>
+        <description lang="en">Quasar is a torrent finding and streaming engine. It doesn't go on torrent websites for legal reasons. However, it calls specially crafted add-ons (called providers) that are installed separately.[CR]This project is a fork of the well known, but no longer maintained Pulsar project from steeve.</description>
+        <language>en el es de fi fr he hr it nl pt ro sk</language>
+        <platform>all</platform>
+        <website>https://github.com/scakemyer/plugin.video.quasar</website>
+        <source>https://github.com/scakemyer/plugin.video.quasar</source>
+        <forum>http://forum.kodi.tv/showthread.php?tid=257967</forum>
+        <license>Non commercial. See https://github.com/scakemyer/plugin.video.quasar/blob/master/LICENSE</license>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+            <screenshot>resources/screenshots/home.jpg</screenshot>
+            <screenshot>resources/screenshots/movies.jpg</screenshot>
+            <screenshot>resources/screenshots/webui.png</screenshot>
+        </assets>
+    </extension>
+</addon>
+
+<addon id="plugin.video.quasar" name="Quasar" version="0.9.78" provider-name="scakemyer">
+    <requires>
+        <import addon="xbmc.addon" version="16.0.0" />
+        <import addon="xbmc.python" version="2.24.0" />
+        <import addon="repository.quasar" optional="true" />
+        <import addon="script.quasar.burst" optional="true" />
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="navigation.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.service" library="service.py" start="startup" />
+    <extension point="xbmc.python.module" library="resources/site-packages" />
+    <extension point="xbmc.subtitle.module" library="navigation.py" />
+    <extension point="xbmc.addon.metadata">
+        <summary lang="en">Quasar: Torrent streaming</summary>
+        <description lang="en">Quasar is a torrent finding and streaming engine. It doesn't go on torrent websites for legal reasons. However, it calls specially crafted add-ons (called providers) that are installed separately.[CR]This project is a fork of the well known, but no longer maintained Pulsar project from steeve.</description>
+        <language>en el es de fi fr he hr it nl pt ro sk</language>
+        <platform>all</platform>
+        <website>https://github.com/scakemyer/plugin.video.quasar</website>
+        <source>https://github.com/scakemyer/plugin.video.quasar</source>
+        <forum>http://forum.kodi.tv/showthread.php?tid=257967</forum>
+        <license>Non commercial. See https://github.com/scakemyer/plugin.video.quasar/blob/master/LICENSE</license>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+            <screenshot>resources/screenshots/home.jpg</screenshot>
+            <screenshot>resources/screenshots/movies.jpg</screenshot>
+            <screenshot>resources/screenshots/webui.png</screenshot>
+        </assets>
+    </extension>
+</addon>
+
+<addon id="plugin.video.quasar" name="Quasar" version="0.9.78" provider-name="scakemyer">
+    <requires>
+        <import addon="xbmc.addon" version="16.0.0" />
+        <import addon="xbmc.python" version="2.24.0" />
+        <import addon="repository.quasar" optional="true" />
+        <import addon="script.quasar.burst" optional="true" />
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="navigation.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.service" library="service.py" start="startup" />
+    <extension point="xbmc.python.module" library="resources/site-packages" />
+    <extension point="xbmc.subtitle.module" library="navigation.py" />
+    <extension point="xbmc.addon.metadata">
+        <summary lang="en">Quasar: Torrent streaming</summary>
+        <description lang="en">Quasar is a torrent finding and streaming engine. It doesn't go on torrent websites for legal reasons. However, it calls specially crafted add-ons (called providers) that are installed separately.[CR]This project is a fork of the well known, but no longer maintained Pulsar project from steeve.</description>
+        <language>en el es de fi fr he hr it nl pt ro sk</language>
+        <platform>all</platform>
+        <website>https://github.com/scakemyer/plugin.video.quasar</website>
+        <source>https://github.com/scakemyer/plugin.video.quasar</source>
+        <forum>http://forum.kodi.tv/showthread.php?tid=257967</forum>
+        <license>Non commercial. See https://github.com/scakemyer/plugin.video.quasar/blob/master/LICENSE</license>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+            <screenshot>resources/screenshots/home.jpg</screenshot>
+            <screenshot>resources/screenshots/movies.jpg</screenshot>
+            <screenshot>resources/screenshots/webui.png</screenshot>
+        </assets>
+    </extension>
+</addon>
+
+<addon
+  id="pvr.iptvImagenio.mac"
+  version="1.0.76"
+  name="PVR Movistar+ TV para Mac OSX (Krypton)"
+  provider-name="Victor Juidiaz">
+  <requires>
+  </requires>
+  <extension
+     point="xbmc.pvrclient"
+     library_linux="Kodi_IPTV_Imagenio.pvr"
+     library_wingl="Kodi_IPTV_Imagenio_win32.dll"
+     library_windx="Kodi_IPTV_Imagenio_win32.dll"
+     library_android="libKodi_IPTV_Imagenio.so"
+     library_osx="Kodi_IPTV_Imagenio.pvr"/>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">Kodi PVR addon for Movistar+ TV</summary>
+    <summary lang="es">Kodi PVR para Movistar+ TV</summary>
+    <description lang="en">IPTV PVR Client support streaming of Live TV for multicast/unicast sources and EPG.</description>
+    <description lang="es">Cliente IPTV para Movistar+ TV television.</description>
+    <disclaimer lang="en">This is unstable software! The authors are in no way responsible for failed playings, incorrect EPG times, wasted hours, or any other undesirable effects.</disclaimer>
+    <disclaimer lang="es">Este software no es estable. No nos hacemos responsables de su correcto funcionamiento.</disclaimer>
+    <platform>all</platform>
+  </extension>
+</addon>
+
+<addon
+  id="pvr.iptvImagenio.rpi"
+  version="1.0.76"
+  name="PVR Movistar+ TV para Raspberry Pi (Krypton)"
+  provider-name="Victor Juidiaz">
+  <requires>
+  </requires>
+  <extension
+     point="xbmc.pvrclient"
+     library_linux="Kodi_IPTV_Imagenio.pvr"
+     library_wingl="Kodi_IPTV_Imagenio_win32.dll"
+     library_windx="Kodi_IPTV_Imagenio_win32.dll"
+     library_android="libKodi_IPTV_Imagenio.so"
+     library_osx="Kodi_IPTV_Imagenio.pvr"/>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">Kodi PVR addon for Movistar+ TV</summary>
+    <summary lang="es">Kodi PVR para Movistar+ TV</summary>
+    <description lang="en">IPTV PVR Client support streaming of Live TV for multicast/unicast sources and EPG.</description>
+    <description lang="es">Cliente IPTV para Movistar+ TV television.</description>
+    <disclaimer lang="en">This is unstable software! The authors are in no way responsible for failed playings, incorrect EPG times, wasted hours, or any other undesirable effects.</disclaimer>
+    <disclaimer lang="es">Este software no es estable. No nos hacemos responsables de su correcto funcionamiento.</disclaimer>
+    <platform>all</platform>
+  </extension>
+</addon>
+
+<addon
+  id="pvr.iptvImagenio.win"
+  version="1.0.76"
+  name="PVR Movistar+ TV para Windows Krypton"
+  provider-name="Victor Juidiaz">
+  <requires>
+  </requires>
+  <extension
+     point="xbmc.pvrclient"
+     library_linux="Kodi_IPTV_Imagenio.pvr"
+     library_wingl="Kodi_IPTV_Imagenio_win32.dll"
+     library_windx="Kodi_IPTV_Imagenio_win32.dll"
+     library_android="libKodi_IPTV_Imagenio.so"
+     library_osx="Kodi_IPTV_Imagenio.pvr"/>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">Kodi PVR addon for Movistar+ TV</summary>
+    <summary lang="es">Kodi PVR para Movistar+ TV</summary>
+    <description lang="en">IPTV PVR Client support streaming of Live TV for multicast/unicast sources and EPG.</description>
+    <description lang="es">Cliente IPTV para Movistar+ TV television.</description>
+    <disclaimer lang="en">This is unstable software The authors are in no way responsible for failed playings, incorrect EPG times, wasted hours, or any other undesirable effects.</disclaimer>
+    <disclaimer lang="es">Este software no es estable. No nos hacemos responsables de su correcto funcionamiento.</disclaimer>
+    <platform>all</platform>
+  </extension>
+</addon>
+
+    <addon id="repository.elangelcaido" name="El Angel Caido" version="0.1.0" provider-name="El Angel Caido">
         <requires>
             <import addon="xbmc.addon" version="12.0.0"/>
         </requires>
         <extension point="xbmc.addon.repository" name="El Angel Caido">
-            <info compressed="false">https://raw.githubusercontent.com/elangelcaido/repository/Addons/_repo/addons.xml</info>
-            <checksum>https://raw.githubusercontent.com/elangelcaido/repository/Addons/_repo/addons.xml.md5</checksum>
-            <datadir zip="true">https://raw.githubusercontent.com/elangelcaido/repository/Addons/_repo/</datadir>
+            <info compressed="false">https://raw.githubusercontent.com/elangelcaido/repository/_repo/addons.xml</info>
+            <checksum>https://raw.githubusercontent.com/elangelcaido/repository/_repo/addons.xml.md5</checksum>
+            <datadir zip="true">https://raw.githubusercontent.com/elangelcaido/repository/_repo/</datadir>
             <hashes>false</hashes>
         </extension>
         <extension point="xbmc.addon.metadata">
-            <summary>Repositorio</summary>
-            <description>Repositorio de Addons para KODI.</description>
+            <summary>Repositorio de El Angel Caido</summary>
+            <description>Repositorio de Addons para KODI de El Angel Caido.</description>
             <platform>all</platform>
     </extension>
+</addon>
+
+<addon id="script.quasar.burst" name="Quasar [COLOR FFFF6B00]Burst[/COLOR]" version="0.5.10" provider-name="scakemyer">
+    <requires>
+        <import addon="xbmc.python" version="2.1.0"/>
+        <import addon="plugin.video.quasar" optional="false"/>
+    </requires>
+    <extension point="xbmc.python.script" library="burst.py">
+        <provides>executable</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary lang="en">Quasar torrents provider</summary>
+        <description lang="en">Quasar Burst is a lean and mean multi-provider for Quasar.</description>
+        <disclaimer lang="en">The author does not host or distribute any of the content displayed by this addon. The author does not have any affiliation with the content providers.
+        </disclaimer>
+        <license>WTFPL, Version 2, December 2004. See included LICENSE.</license>
+        <website>https://burst.surge.sh</website>
+        <source>https://bitbucket.org/scakemyer/script.quasar.burst</source>
+        <forum>TODO</forum>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
+    </extension>
+</addon>
+
+<addon id="plugin.video.tvalacarta"
+    name="tvalacarta"
+    version="4.0.4"
+    provider-name="tvalacarta">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="es">Televisión a la carta</summary>
+    <description lang="es">Para ver la televisión por Internet, a la carta y desde tu media center</description>
+    <summary lang="en">TV on demand (Spanish)</summary>
+    <description lang="en">Watch on demand spanish TV from your media center</description>
+    <platform>all</platform>
+    <license>GNU GPL v3</license>
+    <forum>http://www.mimediacenter.info/foro</forum>
+    <website>http://blog.tvalacarta.info/plugin-xbmc/tvalacarta</website>
+    <email>tvalacarta@gmail.com</email>
+    <source>https://github.com/tvalacarta/tvalacarta</source>
+  </extension>
+  <extension point="xbmc.service" library="service.py" start="login|startup">
+  </extension>
 </addon>
 </addons>
